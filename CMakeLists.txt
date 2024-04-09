@@ -13,10 +13,10 @@ set(SRC_PATH src)
 file(GLOB HEADERS ${SRC_PATH}/*.h)
 file(GLOB SOURCES ${SRC_PATH}/*.cpp)
 
-set(LIBS SDL2::SDL2)
+set(LIBS SDL3::SDL3)
 
 if (NOT ANDROID)
-	find_package(SDL2 REQUIRED)
+	find_package(SDL3 REQUIRED)
 endif()
 
 add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES})
